@@ -46,6 +46,7 @@ Requires:
 - xfce4-terminal (will replace with xterm sometime...)  
 - bash  
 - ImageMagick 'convert'  
+- parallel
 
 Use:  
 `./tnscrot.sh 10.10.10.101 `  
