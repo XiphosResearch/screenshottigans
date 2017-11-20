@@ -57,8 +57,28 @@ It pops open a terminal window, opens a telnet connection to the target, waits a
 Parallel use:  
 `cat iplist.txt | parallel -j 20 ./tnscrot.sh`
 
+## x3270scrot.sh  
+Requires:  
+- xwd  
+- x3270  
+- bash  
+- ImageMagick  
+
+Use:  
+`./x3270scrot.sh 10.10.10.10`  
+
+What it does?  
+It pops open an x3270 session to the mainframe you want to have a nice chat over a cuppa tea with, waits a few seconds to connect, and takes a screenshot. Raw screenshots are stored in screenshots/3270/raw directory. It then converts to a JPG file in screenshots/3270/jpg directory.
+
+Parallel use:  
+`cat iplist.txt | parallel -j 20 ./x3270scrot.sh`  
+
+Bugs:  
+Well, mainframed767 does it better - instead of using sleep, using s3270 we can wait and do it better that way and do other cool stuff. I'll get on that.  
+
+
 ## TODO (sometime never lol)  
-- Add x3270 screenshooter (mainframes!)  
+- Add x3270 screenshooter (mainframes!)  (KINDA done)
 - Add ftp screenshooter  
 - Add basic (Chrome based) HTTP/S screenshooter.  
 - Add X11 screenshooter  
