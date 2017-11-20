@@ -7,8 +7,9 @@ if [ $# -eq 0 ]
 fi
 mkdir -p screenshots/telnet/raw/
 mkdir -p screenshots/telnet/jpg/
+mkdir -p screenshots/telnet/text/
 echo "screenshooting $1"
-CMD="telnet $1"
+CMD="telnet $1 2>&1 | tee screenshots/telnet/text/$1.txt"
 temp_file=$(mktemp)
 echo $CMD > $temp_file
 chmod +x $temp_file
