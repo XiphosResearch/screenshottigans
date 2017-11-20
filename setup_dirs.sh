@@ -49,6 +49,10 @@ if [ ! -d "screenshots/telnet/jpg" ];
   then
     mkdir -p screenshots/telnet/jpg
 fi
+if [ ! -d "screenshots/telnet/text" ]; 
+  then
+    mkdir -p screenshots/telnet/text
+fi
 echo "Now for mainframe directories..."
 if [ ! -d "screenshots/3270/raw" ]; 
   then
