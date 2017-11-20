@@ -76,12 +76,29 @@ Parallel use:
 Bugs:  
 Well, mainframed767 does it better - instead of using sleep, using s3270 we can wait and do it better that way and do other cool stuff. I'll get on that.  
 
+# x11scrot.sh  
+Requires:
+- xwd
+- bash
+- ImageMagick
+
+Use:  
+`./x11scrot.sh 10.10.10.10`  
+
+What it does?  
+Uses xwd to take a screenshot of the target. Raw screenshots are stored in screenshots/x11/raw directory. JPG versions... Yep... You guessed it... In the screenshots/x11/jpg directory...
+
+Parallel Use:  
+`cat iplist.txt | parallel -j 20 ./x11scrot.sh`  
+
+Bugs:  
+X11 sucks so loads probably...  
 
 ## TODO (sometime never lol)  
 - Add x3270 screenshooter (mainframes!)  (KINDA done)
 - Add ftp screenshooter  
 - Add basic (Chrome based) HTTP/S screenshooter.  
-- Add X11 screenshooter  
+- Add X11 screenshooter  (Needs testing. only does display:0 for now.)
 - Add a 'port' argument to the tools.
 - Write a nmap output parser for automation.
 - Add option/tools for automatic brute forcing of services requiring credentials.  
